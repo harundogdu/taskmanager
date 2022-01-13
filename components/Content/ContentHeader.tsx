@@ -1,33 +1,46 @@
 import React from "react";
 
 const ContentHeader = () => {
+  const handleSidebarClick = () => {
+    const sidebar = document.getElementById("sidebar");
+    const drawerMenu = document.getElementById("drawerMenu");
+    sidebar?.classList.toggle("hidden");
+    drawerMenu?.classList.toggle("rotate-180");
+  };
+
   return (
     <header className="border-b border-gray-200 px-6 py-2 flex flex-col gap-y-4">
       <div id="upper" className="flex items-center justify-between">
-        <div className="flex items-center justify-between w-1/3 gap-x-6">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        <div className="flex items-center justify-between w-1/3 gap-x-6 ">
+          <button
+            onClick={handleSidebarClick}
+            id="drawerMenu"
+            className=" transition-all duration-500"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-          <div className="relative w-full bg-red-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <div className="relative w-full h-full">
             <input
               type="text"
-              placeholder="Search ur Job!"
-              className="w-full h-10 border flex-1 border-gray-300 outline-none focus-within:border-primary pl-8"
+              placeholder="Search for tasks assigned to you!"
+              className="w-full h-full border flex-1 py-2 text-xs text-gray-600 border-gray-300 outline-none rounded-lg pl-8"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 absolute left-1 top-2 stroke-gray-400"
+              className="h-4 w-4 absolute left-2 top-2 stroke-gray-400"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -60,65 +73,53 @@ const ContentHeader = () => {
           </button>
           <div>
             <img
-              src="https://pbs.twimg.com/profile_images/1450192163585863685/UlUAzUtN_400x400.jpg"
-              alt="Personal Image"
-              className="w-8 h-8 rounded-full cursor-pointer border border-primary p-[0.1rem] border-dashed"
+              src="https://pbs.twimg.com/profile_images/1462792445570261002/mFAbmt0y_400x400.jpg"
+              alt="Person 2"
+              className="rounded-full w-7 h-7 border border-white"
             />
           </div>
         </div>
       </div>
       <div id="lower" className="flex items-center justify-between">
-        <div id="teams-container">
-          <p className="uppercase text-primary font-semibold mb-2">crew</p>
+        <div
+          id="teams-container"
+          className="flex items-center justify-between gap-x-4"
+        >
+          <p className=" text-primary font-semibold mb-2">Görev Atananlar</p>
           <div className="flex items-center justify-center">
             <div className="flex items-center justify-center">
               <img
                 src="https://pbs.twimg.com/profile_images/1450192163585863685/UlUAzUtN_400x400.jpg"
                 alt="Person 1"
-                className="rounded-full w-8 h-8 border border-white  static z-10"
+                className="rounded-full w-7 h-7 border border-white  static z-10"
               />
               <img
                 src="https://pbs.twimg.com/profile_images/1462792445570261002/mFAbmt0y_400x400.jpg"
                 alt="Person 2"
-                className="rounded-full w-8 h-8 border border-white  -ml-4 static z-[9] "
+                className="rounded-full w-7 h-7 border border-white  -ml-4 static z-[9] "
               />
               <img
                 src="https://pbs.twimg.com/profile_images/1347911385997602821/J3ARkPca_400x400.jpg"
                 alt="Person 3"
-                className="rounded-full w-8 h-8 border border-white  -ml-4 static z-[8]"
+                className="rounded-full w-7 h-7 border border-white  -ml-4 static z-[8]"
               />
               <img
                 src="https://pbs.twimg.com/media/FI5es3XX0AgcjFD?format=jpg&name=4096x4096"
                 alt="Person 4"
-                className="rounded-full w-8 h-8 border border-white  -ml-4 static z-[7]"
+                className="rounded-full w-7 h-7 border border-white  -ml-4 static z-[7]"
               />
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-3 w-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4v16m8-8H4"
-              />
-            </svg>
-            <span>5</span>
           </div>
         </div>
         <div
           id="button-container"
           className="flex items-center justify-between gap-x-4"
         >
-          <button className="text-white bg-gradient-to-br from-indigo-500 to-primary px-6 py-2 rounded text-sm font-semibold">
-            Buton 1
+          <button className="text-white bg-primary px-8 py-2 rounded text-xs font-semibold">
+            Tamamlanmış Olanlar
           </button>
-          <button className="text-white bg-gradient-to-tl from-primary to-indigo-500 px-6 py-2 rounded text-sm font-semibold">
-            Buton 2
+          <button className="text-white bg-secondary px-8 py-2 rounded text-xs font-semibold">
+            + Yeni Görev Oluştur
           </button>
         </div>
       </div>

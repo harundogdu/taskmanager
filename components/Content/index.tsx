@@ -4,7 +4,7 @@ import ContentHeader from "./ContentHeader";
 
 const Content = () => {
   return (
-    <main id="main" className="flex-1 flex flex-col">
+    <main id="main" className="flex-1 flex flex-col overflow-hidden">
       <ContentHeader />
       <ContentFooter />
     </main>
