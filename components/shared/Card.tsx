@@ -49,12 +49,12 @@ const Card = ({ card }: CardProps) => {
         setBgColor("bg-indigo-100");
         break;
       case "research":
-        setColor("text-indigo-900");
-        setBgColor("bg-indigo-100");
+        setColor("text-cyan-900");
+        setBgColor("bg-cyan-100");
         break;
       case "design":
-        setColor("text-indigo-900");
-        setBgColor("bg-indigo-100");
+        setColor("text-rose-900");
+        setBgColor("bg-rose-100");
         break;
       case "other":
       default:
@@ -65,7 +65,7 @@ const Card = ({ card }: CardProps) => {
   }, [card.types_title]);
 
   return (
-    <div className="bg-white flex flex-col p-2 shadow-lg rounded-lg border-b border-gray-100 mt-2 flex-shrink-0">
+    <div className="bg-white flex text- flex-col p-2 shadow-lg rounded-lg border-b border-gray-100 mt-2 flex-shrink-0">
       <div className="flex items-center justify-between">
         <h2
           className={`rounded-lg py-1 px-4 text-[10px] font-bold uppercase flex items-center ${
