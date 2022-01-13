@@ -1,20 +1,90 @@
 [
   {
     "id": 1,
-    "title": "Design",
+    "type": "Design",
+    "role": "todo",
+    "title": "Hakkımızda sayfası UI/UX tasarımları yapılacak. ",
     "attachment": "4",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
   },
   {
     "id": 2,
-    "title": "Frontend Development",
+    "type": "Frontend",
+    "role": "todo",
+    "title": "İletişim sayfası formu düzenlenecek. ",
     "attachment": "3",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
   },
   {
     "id": 3,
-    "title": "Backend Development",
+    "type": "Backend",
+    "role": "todo",
+    "title": "Yönetim paneli için gerekli sayfalar yapılacak. ",
     "attachment": "6",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 4,
+    "type": "Marketing",
+    "role": "inprogress",
+    "title": "Logo, banner, reklamlar yapılacak. ",
+    "attachment": "4",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 5,
+    "type": "Research",
+    "role": "inprogress",
+    "title": "Uygularımızın kullanım oranının artması nasıl sağlanır, hakkında araştırma yapılacak.",
+    "attachment": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 6,
+    "type": "New Feature",
+    "role": "testing",
+    "title": "Yeni özelliklerin geliştirilmesi gerekiyor. ",
+    "attachment": "1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 7,
+    "type": "Marketing",
+    "role": "done",
+    "title": "SEO ve Google Analytics yapılacak. ",
+    "attachment": "6",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 8,
+    "type": "AR-GE",
+    "role": "done",
+    "title": "Sistemin bakım, onarım ve yedeklemesi için neler yapılmalı, araştırılacak.",
+    "attachment": "1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 9,
+    "type": "New Feature",
+    "role": "todo",
+    "title": "Tasarım olarak neleri daha farklı yapabiliriz, hangi paketler kullanılmalı rapor halinde sunulacak. ",
+    "attachment": "2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 10,
+    "type": "Bug",
+    "role": "todo",
+    "title": "Sistemde çalışanların giriş yapmasındaki sorunlar çözülecek. ",
+    "attachment": "2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
+  },
+  {
+    "id": 11,
+    "type": "Bug",
+    "role": "outdated",
+    "title": "Sistemde çalışanların giriş yapmasındaki sorunlar araştırılacak.",
+    "attachment": "2",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus omnis quibusdam distinctio illum nulla recusandae dolores id officia? Architecto, laboriosam ullam. Unde architecto libero necessitatibus odio sed aliquam id!"
   }
 ]
