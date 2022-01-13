@@ -1,11 +1,23 @@
+import axios from "axios";
+import NewTaskModal from "components/shared/NewTaskModal";
 import React from "react";
 
 const ContentHeader = () => {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   const handleSidebarClick = () => {
     const sidebar = document.getElementById("sidebar");
     const drawerMenu = document.getElementById("drawerMenu");
     sidebar?.classList.toggle("hidden");
     drawerMenu?.classList.toggle("rotate-180");
+  };
+
+  const handleNewTaskRequest = () => {
+    toggleModal();
+  };
+
+  
+  const toggleModal = () => {
+    setIsOpen(!modalIsOpen);
   };
 
   return (
@@ -87,26 +99,26 @@ const ContentHeader = () => {
         >
           <p className=" text-primary font-semibold mb-2">Görev Atananlar</p>
           <div className="flex items-center justify-center">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center -z-10">
               <img
                 src="https://pbs.twimg.com/profile_images/1450192163585863685/UlUAzUtN_400x400.jpg"
                 alt="Person 1"
-                className="rounded-full w-7 h-7 border border-white  static z-10"
+                className="rounded-full w-7 h-7 border border-white   z-10"
               />
               <img
                 src="https://pbs.twimg.com/profile_images/1462792445570261002/mFAbmt0y_400x400.jpg"
                 alt="Person 2"
-                className="rounded-full w-7 h-7 border border-white  -ml-4 static z-[9] "
+                className="rounded-full w-7 h-7 border border-white  -ml-4  z-[9] "
               />
               <img
                 src="https://pbs.twimg.com/profile_images/1347911385997602821/J3ARkPca_400x400.jpg"
                 alt="Person 3"
-                className="rounded-full w-7 h-7 border border-white  -ml-4 static z-[8]"
+                className="rounded-full w-7 h-7 border border-white  -ml-4  z-[8]"
               />
               <img
                 src="https://pbs.twimg.com/media/FI5es3XX0AgcjFD?format=jpg&name=4096x4096"
                 alt="Person 4"
-                className="rounded-full w-7 h-7 border border-white  -ml-4 static z-[7]"
+                className="rounded-full w-7 h-7 border border-white  -ml-4  z-[7]"
               />
             </div>
           </div>
@@ -118,11 +130,18 @@ const ContentHeader = () => {
           <button className="text-white bg-primary px-8 py-2 rounded text-xs font-semibold">
             Tamamlanmış Olanlar
           </button>
-          <button className="text-white bg-secondary px-8 py-2 rounded text-xs font-semibold">
+          <button
+            onClick={handleNewTaskRequest}
+            className="text-white bg-secondary px-8 py-2 rounded text-xs font-semibold "
+          >
             + Yeni Görev Oluştur
           </button>
         </div>
       </div>
+      <NewTaskModal
+        toggleModal={toggleModal}
+        modalIsOpen={modalIsOpen}
+      />
     </header>
   );
 };

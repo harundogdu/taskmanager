@@ -1,11 +1,12 @@
 import React from "react";
-import { handleColor } from "utils/helper";
 type CardProps = {
   card: {
     id: number;
-    title: string;
-    type: string;
-    attachment: string;
+    title?: string;
+    status_title: string;
+    attachment?: string;
+    types_title: string;
+    role?: string;
   };
 };
 
@@ -13,52 +14,55 @@ const Card = ({ card }: CardProps) => {
   const [color, setColor] = React.useState("text-red-900");
   const [bgColor, setBgColor] = React.useState("bg-red-100");
 
-  /*   React.useEffect(() => {
-    const { selectedColor, selectedBgColor } = handleColor(card.type);
-    setColor(selectedColor);
-    setBgColor(selectedBgColor);
-  }, [card.type]); */
-
   React.useEffect(() => {
-    switch (card.type.toLowerCase()) {
-      case "design":
+    switch (card.types_title.toLowerCase()) {
+      case "task":
         setColor("text-red-900");
         setBgColor("bg-red-100");
         break;
-      case "frontend":
+      case "feature":
         setColor("text-green-900");
         setBgColor("bg-green-100");
         break;
-      case "backend":
+      case "enhancement":
         setColor("text-yellow-900");
         setBgColor("bg-yellow-100");
         break;
-      case "marketing":
+      case "support":
         setColor("text-blue-900");
         setBgColor("bg-blue-100");
         break;
-      case "research":
+      case "documentation":
         setColor("text-orange-900");
         setBgColor("bg-orange-100");
         break;
-      case "new feature":
+      case "feature-request":
         setColor("text-purple-900");
         setBgColor("bg-purple-100");
         break;
-      case "bug":
+      case "bug-report":
         setColor("text-pink-900");
         setBgColor("bg-pink-100");
         break;
-      case "ar-ge":
+      case "marketing":
         setColor("text-indigo-900");
         setBgColor("bg-indigo-100");
         break;
+      case "research":
+        setColor("text-indigo-900");
+        setBgColor("bg-indigo-100");
+        break;
+      case "design":
+        setColor("text-indigo-900");
+        setBgColor("bg-indigo-100");
+        break;
+      case "other":
       default:
         setColor("text-gray-900");
         setBgColor("bg-gray-100");
         break;
     }
-  }, [card.type]);
+  }, [card.types_title]);
 
   return (
     <div className="bg-white flex flex-col p-2 shadow-lg rounded-lg border-b border-gray-100 mt-2 flex-shrink-0">
@@ -68,7 +72,7 @@ const Card = ({ card }: CardProps) => {
             color + " " + bgColor
           }`}
         >
-          {card.type}
+          {card.types_title}
         </h2>
         <div className="flex items-center justify-between gap-x-1">
           <svg
@@ -94,7 +98,7 @@ const Card = ({ card }: CardProps) => {
       <div className="flex items-center mt-1">
         {card.id > 6 ? (
           <>
-             <img
+            <img
               src="https://pbs.twimg.com/profile_images/1462792445570261002/mFAbmt0y_400x400.jpg"
               alt="Person 2"
               className="rounded-full w-6 h-6 border border-white"
@@ -113,7 +117,7 @@ const Card = ({ card }: CardProps) => {
               alt="Person 3"
               className="rounded-full w-6 h-6  border border-white"
             />
-             <img
+            <img
               src="https://pbs.twimg.com/profile_images/1450192163585863685/UlUAzUtN_400x400.jpg"
               alt="Person 1"
               className="rounded-full w-6 h-6 border border-white  -ml-4"
