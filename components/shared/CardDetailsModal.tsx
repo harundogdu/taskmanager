@@ -14,6 +14,7 @@ type CardDetailsModalProp = {
     created_at: string;
     time: string;
     description: string;
+    user_name: string;
   };
 };
 
@@ -105,10 +106,10 @@ const CardDetailsModal = ({ card, isOpen, toggle }: CardDetailsModalProp) => {
             alt="Oluşturan Kişi"
             className="rounded-full w-6 h-6 border border-white"
           />
-          <span className="text-primary capitalize">Oluşturan Kişi</span>
+          <span className="text-primary capitalize">{card.user_name}</span>
         </div>
         <h2 className="text-primary text-xl capitalize">{card.title}</h2>
-        <p className="flex-1 bg-gray-50 text-sm p-4">{card.description}</p>
+        <p className="flex-1 bg-gray-50 text-sm p-4 overflow-y-auto">{card.description}</p>
         <div className="flex items-center justify-between pb-10 flex-shrink-0">
           <div className="flex items-center justify-between gap-x-4">
             <span

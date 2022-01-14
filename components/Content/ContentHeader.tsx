@@ -5,9 +5,9 @@ import React from "react";
 const ContentHeader = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const handleSidebarClick = () => {
-    const sidebar = document.getElementById("sidebar");
+  /*   const sidebar = document.getElementById("sidebar");
+    sidebar?.classList.toggle("hidden"); */
     const drawerMenu = document.getElementById("drawerMenu");
-    sidebar?.classList.toggle("hidden");
     drawerMenu?.classList.toggle("rotate-180");
   };
 
