@@ -31,7 +31,7 @@ const NewTaskModal = ({ modalIsOpen, toggleModal }: NewTaskModalProps) => {
     toggleModal();
     setTimeout(() => {
       window.location.reload();
-    }, 300);
+    }, 100);
   };
 
   React.useEffect(() => {
