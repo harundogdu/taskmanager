@@ -1,4 +1,4 @@
-import axios from "axios";
+import MyDropdown from "components/shared/MyDropdown";
 import NewTaskModal from "components/shared/NewTaskModal";
 import React from "react";
 
@@ -15,11 +15,10 @@ const ContentHeader = () => {
     toggleModal();
   };
 
-  
   const toggleModal = () => {
     setIsOpen(!modalIsOpen);
   };
-
+  
   return (
     <header className="border-b border-gray-200 px-6 py-2 flex flex-col gap-y-4">
       <div id="upper" className="flex items-center justify-between">
@@ -83,13 +82,7 @@ const ContentHeader = () => {
               />
             </svg>
           </button>
-          <div>
-            <img
-              src="https://pbs.twimg.com/profile_images/1462792445570261002/mFAbmt0y_400x400.jpg"
-              alt="Person 2"
-              className="rounded-full w-7 h-7 border border-white"
-            />
-          </div>
+          <MyDropdown />
         </div>
       </div>
       <div id="lower" className="flex items-center justify-between">
@@ -138,10 +131,7 @@ const ContentHeader = () => {
           </button>
         </div>
       </div>
-      <NewTaskModal
-        toggleModal={toggleModal}
-        modalIsOpen={modalIsOpen}
-      />
+      <NewTaskModal toggleModal={toggleModal} modalIsOpen={modalIsOpen} />
     </header>
   );
 };
